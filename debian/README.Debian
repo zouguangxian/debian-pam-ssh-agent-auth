@@ -1,0 +1,24 @@
+In order to enable SSH agent authentication in a PAM module, you need to enter
+them in the module's configuratio in /etc/pam.d/. For details, see the
+pam_ssh_agent_auth(8) man page; the common use cases are outlined here.
+
+sudo
+====
+
+For use with sudo, a common configuration is entering the line
+
+auth     sufficient    pam_ssh_agent_auth.so file=/etc/security/authorized_keys
+
+into /etc/pam.d/sudo before the common-auth line.
+
+Then, concatenate the relevant SSH public key lines into
+/etc/security/authorized_keys.
+
+
+chsh
+====
+
+In order to make chsh available on machines without configured user passwords,
+add the following line in /etc/pam.d/chsh before the common-auth line:
+
+auth    sufficient    pam_ssh_agent_auth.so file=~/.ssh/authorized_keys

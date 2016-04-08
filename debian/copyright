@@ -1,41 +1,346 @@
-This package was debianized by Jamie Beverly <soupboy@sourceforge.net> on
-Wed, 13 Jan 2010 01:08:49 +0300.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pam-ssh-agent-auth
+Upstream-Contact: Jamie Beverly
+Source: http://sourceforge.net/projects/pamsshagentauth/
 
-It was downloaded from http://pamsshagentauth.sf.net/
+Files: aclocal.m4
+Copyright: 2005 Tim Rice
+License: BSD-2-clause
+Comment: This file seems to be copied from the OpenSSH project between 2005 and
+ 2011; it is implied in OPENSSH_LICENSE (6) that it is covered under
+ BSD-2-clause.
 
-Copyright:
+Files: atomicio.c
+Copyright: 2006 Damien Miller, 2005 Anil Madhavapeddy, 1995, 1999 Theo de Raadt
+License: BSD-2-clause
 
-    Copyright (C) 2008 Jamie Beverly
+Files: atomicio.h
+Copyright: 2006 Damien Miller, 1995, 1999 Theo de Raadt
+License: BSD-2-clause
 
-License:
+Files: authfd.c key.c
+Copyright: 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland,
+ 2000, 2001 Markus Friedl <markus@openbsd.org>,
+ Jamie Beverly
+License: BSD-2-clause, and tatuylonen
 
-	Copyright (c) 2008, Jamie Beverly.
-	All rights reserved.
+Files: authfd.h buffer.c buffer.h includes.h log.h match.h misc.h pathnames.h rsa.h ssh.h uidswap.c uidswap.h xmalloc.c xmalloc.h
+Copyright: 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
+License: tatuylonen
 
-	Redistribution and use in source and binary forms, with or without modification, are
-	permitted provided that the following conditions are met:
+Files: bufaux.c bufbn.c cipher.h log.c
+Copyright: 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland,
+ 2000 Markus Friedl <markus@openbsd.org>
+License: BSD-2-clause, and tatuylonen
 
-		1. Redistributions of source code must retain the above copyright notice, this list of
-		   conditions and the following disclaimer.
+Files: cleanup.c ssh-rsa.c
+Copyright: 2003 Markus Friedl <markus@openbsd.org>
+License: ISC
 
-		2. Redistributions in binary form must reproduce the above copyright notice, this list
-		   of conditions and the following disclaimer in the documentation and/or other materials
-		   provided with the distribution.
+Files: compat.c compat.h fatal.c kex.h key.h identity.h secure_filename.c secure_filename.h ssh2.h ssh-dss.c uuencode.c uuencode.h 
+Copyright: 1999, 2000, 2001 Markus Friedl <markus@openbsd.org>
+License: BSD-2-clause
 
-	THIS SOFTWARE IS PROVIDED BY Jamie Beverly ``AS IS'' AND ANY EXPRESS OR IMPLIED
-	WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
-	FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Jamie Beverly OR
-	CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-	SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
-	ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Files: config.guess config.sub
+Copyright: 1992-2012 Free Software Foundation, Inc.
+License: GPL-2+ with autoconf exception
 
-	The views and conclusions contained in the software and documentation are those of the
-	authors and should not be interpreted as representing official policies, either expressed
-	or implied, of Jamie Beverly.
+Files: config.h.in Makefile.in pam_user_key_allowed2.c
+Copyright: 2000 Markus Friedl, 2008-2014 Jamie Beverly
+License: BSD-2-clause
+
+Files: configure
+Copyright: 1992-2012 Free Software Foundation, Inc.
+License: unlimited
+
+Files: configure.ac
+Copyright: 1999-2004 Damien Miller
+License: ISC
+
+Files: CONTRIBUTORS README
+Copyright: 2008 Jamie Beverly
+License: BSD-2-clause
+Comment: These files don't have explicit license statements, but are covered by
+ the project's license statement. It can be found in upstream's
+ debian/copyright file.
+
+Files: defines.h entropy.c entropy.h
+Copyright: 1999-2003 Damien Miller
+License: BSD-2-clause
+
+Files: dist/*
+Copyright: 2010 Jamie Beverly
+License: BSD-2-clause
+Comment: This is declared in dist/LICENSE
+
+Files: get_command_line.c get_command_line.h iterate_ssh_agent_keys.c iterate_ssh_agent_keys.h pam_ssh_agent_auth.c pam_ssh_agent_auth.pod pam_ssh_agent_auth.sudoers.conf pam_static_macros.h pam_user_authorized_keys.c pam_user_authorized_keys.h pam_user_key_allowed2.h userauth_pubkey_from_id.c userauth_pubkey_from_id.h
+Copyright: 2008-2014 Jamie Beverly
+License: BSD-2-clause
+
+Files: install-sh
+Copyright: 1999 Massachusetts Institute of Technology
+License: MIT
+
+Files: LICENSE.OpenSSL
+Copyright: 1998-2001 The OpenSSL Project
+License: openssl
+Comment: It seems that this license is not referenced anywhere in the code, so
+ the license text itself is the only file included under this license.
+
+Files: misc.c
+Copyright: 2000 Markus Friedl, 2005, 2006 Damien Miller
+License: BSD-2-clause
+
+Files: mkinstalldirs
+Copyright: Noah Friedman <friedman@prep.ai.mit.edu>
+License: public-domain
+
+Files: openbsd-compat/*
+Copyright: 1995 International Business Machines, Inc,
+ 1996-2001 Internet Software Consortium,
+ 1997-2005 Todd C. Miller <Todd.Miller@courtesan.com>,
+ 1988-2006 Damien Miller <djm@mindrot.org> / <djm@openbsd.org>,
+ 2003-2007 Darren Tucker,
+ 2002 Cray Inc. (Wendy Palm <wendyp@cray.com>),
+ 2000-2001, Corinna Vinschen <vinschen@cygnus.com>,
+ 2000-2003 Ben Lindstrom,
+ 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland,
+ 1995-1998 Theo de Raadt,
+ 1995 Patrick Powell,
+ 1983-1994 The Regents of the University of California,
+ 1999 WIDE Project,
+ 2001 Jakob Schlyter,
+ 1993 Digital Equipment Corporation,
+ 2002-2005 Tim Rice,
+ 2001 Gert Doering,
+ 2000 Michael Stone,
+ 2000 Denis Parker,
+ 2005 Daniel Walsh <dwalsh@redhat.com>
+ 2006 Chad Mynhier,
+ 2005 The SCO Group,
+ 2003 Constantin S. Svintsoff <kostik@iclub.nsu.ru>,
+ 2004 Otto Moerbeek <otto@drijf.net>,
+ 1983-1997 Eric P. Allman,
+ 2000-2001 Aaron D. Gifford,
+ 1998-2000 Free Software Foundation, Inc.,
+ 2004 Ted Unangst,
+ 2002 Niels Provos <provos@citi.umich.edu>
+License: BSD-2-clause and BSD-3-clause and ISC and X11 and powell and tatuylonen
+Comment:
+ This directory is largely identical with what is found in openssh, with just
+ names changed to avoid collisions. This section credits the creators and
+ mentions the licenses in batch (assisted by the licensecheck utility), but if
+ you need more information, see the openssh package or the individual files'
+ copyright statements.
+
+Files: OPENSSH_LICENSE
+License: BSD-2-clause
+Copyright: Markus Friedl
+Comment:
+ The file states that it is part of OpenSSH, and (in 6) that the remaining
+ components are BSD-licensed.
+ .
+ It seems that this license is not referenced anywhere in the code outside the
+ build process itself, so the license does not get shipped with the binaries.
+
+Files: platform.h
+Copyright: 2006 Darren Tucker
+License: ISC
+
+License: tatuylonen
+ As far as I am concerned, the code I have written for this software
+ can be used freely for any purpose.  Any derived versions of this
+ software must be clearly marked as such, and if the derived work is
+ incompatible with the protocol description in the RFC file, it must be
+ called by a name other than "ssh" or "Secure Shell".
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: ISC
+ Permission to use, copy, modify, and distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: GPL-2+ with autoconf exception
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+
+License: unlimited
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
+
+License: MIT
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the name of M.I.T. not be used in advertising or
+ publicity pertaining to distribution of the software without specific,
+ written prior permission.  M.I.T. makes no representations about the
+ suitability of this software for any purpose.  It is provided "as is"
+ without express or implied warranty.
+
+License: public-domain
+ No further explanation given.
+
+License: openssl
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer. 
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. All advertising materials mentioning features or use of this
+    software must display the following acknowledgment:
+    "This product includes software developed by the OpenSSL Project
+    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+ .
+ 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
+    endorse or promote products derived from this software without
+    prior written permission. For written permission, please contact
+    openssl-core@openssl.org.
+ .
+ 5. Products derived from this software may not be called "OpenSSL"
+    nor may "OpenSSL" appear in their names without prior written
+    permission of the OpenSSL Project.
+ .
+ 6. Redistributions of any form whatsoever must retain the following
+    acknowledgment:
+    "This product includes software developed by the OpenSSL Project
+    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
+ .
+ THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
+ EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
+ ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: X11
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, distribute with modifications, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name(s) of the above copyright
+ holders shall not be used in advertising or otherwise to promote the
+ sale, use or other dealings in this Software without prior written
+ authorization.
+
+License: powell
+ This code is based on code written by Patrick Powell (papowell@astart.com)
+ It may be used for any purpose as long as this notice remains intact
+ on all source code distributions
 
 
-The Debian packaging is copyright 2010, Jamie Beverly <soupboy@sourceforge.net> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.
+Files: debian/*
+Copyright: 2008-2010 Jamie Beverly, 2014 chrysn <chrysn@fsfe.org>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the license can be seen in
+ `/usr/share/common-licenses/GPL-2'.
